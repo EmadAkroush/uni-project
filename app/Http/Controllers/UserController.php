@@ -48,6 +48,6 @@ class UserController extends Controller
     }
     public function userTicket(User $User){
 
-        return $User->all()->load('usersTicket');
+        return $User->load( relations: 'usersTicket');
       }
 }
