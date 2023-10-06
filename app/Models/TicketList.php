@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TicketList extends Model
 {
+    protected $table = 'ticket_lists';
+    protected $guarded = [];
     use HasFactory;
 }
