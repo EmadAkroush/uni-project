@@ -25,13 +25,17 @@ use App\Http\Controllers\TicketListController;
 // });
 
 
-Route::get('/tickets/user/{user:id}', [UserController::class , 'userTicket'])->middleware('auth:sanctum');
+Route::get('/tickets/user/{user:id}', [UserController::class , 'userTicket']);
 Route::resource('/ticket', TticketController::class);
 Route::resource('/ticketlist', TicketListController::class);
 Route::post('/register', [AuthController::class , 'register']);
 
 Route::post('/logout', [AuthController::class , 'logout'])->middleware('auth:sanctum');
 Route::post('/login', [AuthController::class , 'login']);
+Route::get('/me', [UserController::class, 'me'])->middleware('auth:sanctum');
+
+
+
 
 
 

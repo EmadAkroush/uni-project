@@ -13,7 +13,7 @@ class TicketListController extends Controller
      */
     public function index()
     {
-        return TicketList::all();
+        return TicketList::search()->filter()->FilterTo()->paginate(6);
     }
 
     /**
@@ -52,4 +52,7 @@ class TicketListController extends Controller
     {
         //
     }
+
+
+
 }
