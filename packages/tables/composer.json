@@ -1,0 +1,11 @@
+{
+    "name": "packages/tables",
+    "description": "is for test",
+    "authors": [
+        {
+            "name": "emad",
+            "email": "emadakroush@gmail.com"
+        }
+    ],
+    "require": {}
+}
